@@ -3,7 +3,7 @@ var indexes =
    {
         "id": "HelpfulHints/About.htm", 
         "title": "About Presentation Editor", 
-        "body": "Presentation Editor is an online application that lets you look through and edit presentationsdirectly in your browser . Using Presentation Editor, you can perform various editing operations like in any desktop editor, print the edited presentations keeping all the formatting details or download them onto your computer hard disk drive as PPTX, PDF, or ODP files. To view the current software version and licensor details, click the icon at the left sidebar."
+        "body": "Presentation Editor is an online application that lets you look through and edit presentations directly in your browser . Using Presentation Editor, you can perform various editing operations like in any desktop editor, print the edited presentations keeping all the formatting details or download them onto your computer hard disk drive as PPTX, PDF, or ODP files. To view the current software version and licensor details, click the icon at the left sidebar."
     },
    {
         "id": "HelpfulHints/AdvancedSettings.htm", 
