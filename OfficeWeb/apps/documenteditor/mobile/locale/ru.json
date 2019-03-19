@@ -278,6 +278,7 @@
   "DE.Views.EditParagraph.textBack": "Назад",
   "DE.Views.EditParagraph.textBackground": "Фон",
   "DE.Views.EditParagraph.textBefore": "Перед",
+  "DE.Views.EditParagraph.textFirstLine": "Первая строка",
   "DE.Views.EditParagraph.textFromText": "Расстояние до текста",
   "DE.Views.EditParagraph.textKeepLines": "Не разрывать абзац",
   "DE.Views.EditParagraph.textKeepNext": "Не отрывать от следующего",
