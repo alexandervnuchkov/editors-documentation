@@ -14,23 +14,39 @@
             <input id="search" class="searchBar" placeholder="Поиск" type="text" onkeypress="doSearch(event)">
         </div>
 			<h1>Вкладка Плагины</h1>
-            <p>Вкладка <b>Плагины</b> позволяет получить доступ к дополнительным возможностям редактирования, используя доступные сторонние компоненты. Здесь также можно использовать макросы для автоматизации рутинных задач.</p>
-            <p><img alt="Вкладка Плагины" src="../images/interface/pluginstab.png" /></p>
-            <p>Кнопка <b>Macros</b> позволяет открыть окно, в котором можно создавать собственные макросы и запускать их. Для получения дополнительной информации о макросах, пожалуйста, обратитесь к нашей <a target="_blank" href="https://api.onlyoffice.com/plugin/macros" onclick="onhyperlinkclick(this)">Документации по API</a>.</p>
+            <p>Вкладка <b>Плагины</b> позволяет получить доступ к дополнительным возможностям редактирования, используя доступные сторонние компоненты. <span class="ONLYOFFICEFeatures">Здесь также можно использовать макросы для автоматизации рутинных задач</span>.</p>
+            <div class="onlineDocumentFeatures">
+                <p>Окно онлайн-редактора документов:</p>
+                <p><img alt="Вкладка Плагины" src="../images/interface/pluginstab.png" /></p>
+            </div>
+            <div class="desktopDocumentFeatures">
+                <p>Окно десктопного редактора документов:</p>
+                <div class="ONLYOFFICEFeatures">
+                    <p><img alt="Вкладка Плагины" src="../images/interface/desktop_pluginstab.png" /></p>
+                </div>
+                <div class="R7OFFICEFeatures">
+                    <p><img alt="Вкладка Плагины" src="../images/interface/r7_desktop_pluginstab.png" /></p>
+                </div>
+            </div>
+            <p class="desktopDocumentFeatures">Кнопка <b>Настройки</b> позволяет открыть окно, в котором можно просмотреть все установленные плагины, управлять ими и добавлять свои собственные.</p>
+            <p class="ONLYOFFICEFeatures">Кнопка <b>Макросы</b> позволяет открыть окно, в котором можно создавать собственные макросы и запускать их. Для получения дополнительной информации о макросах, пожалуйста, обратитесь к нашей <a target="_blank" href="https://api.onlyoffice.com/plugin/macros" onclick="onhyperlinkclick(this)">Документации по API</a>.</p>
             <p>В настоящее время по умолчанию доступны следующие плагины:</p>		
             <ul>
+                <li class="R7OFFICEFeatures"><b>Главред</b> -  позволяет выполнять стилистическую проверку выделенного текста,</li>
+                <li class="desktopDocumentFeatures R7OFFICEFeatures"><b>Отправить</b> -  позволяет отправить документ по электронной почте с помощью десктопного почтового клиента по умолчанию,</li>
                 <li><b>Клипарт</b> - позволяет добавлять в документ изображения из коллекции картинок,</li>
                 <li><b>Подсветка кода</b> - позволяет подсвечивать синтаксис кода, выбирая нужный язык, стиль, цвет фона,</li>
-                <li><b>Распознавание текста</b> - позволяет распознавать текст с картинки и вставлять его в текст документа,</li>
+                <li class="ONLYOFFICEFeatures"><b>Распознавание текста</b> - позволяет распознавать текст с картинки и вставлять его в текст документа,</li>
                 <li><b>Фоторедактор</b> - позволяет редактировать изображения: обрезать, изменять размер, применять эффекты и так далее,</li>
-                <li><b>Речь</b> - позволяет преобразовать выделенный текст в речь,</li>
+                <li class="onlineDocumentFeatures ONLYOFFICEFeatures"><b>Речь</b> - позволяет преобразовать выделенный текст в речь,</li>
                 <li><b>Таблица символов</b> - позволяет вставлять в текст специальные символы,</li>
                 <li><b>Синонимы</b> - позволяет находить синонимы и антонимы какого-либо слова и заменять его на выбранный вариант,</li>
                 <li><b>Переводчик</b> - позволяет переводить выделенный текст на другие языки,</li>
                 <li><b>YouTube</b> - позволяет встраивать в документ видео с YouTube.</li>
             </ul>
-            <p>Плагины <b>Wordpress</b> и <b>EasyBib</b> можно использовать, если подключить соответствующие сервисы в настройках портала. Можно воспользоваться следующими инструкциями <a target="_blank" href="https://helpcenter.onlyoffice.com/server/windows/community/authorization-keys.aspx" onclick="onhyperlinkclick(this)">для серверной версии</a> или <a target="_blank" href="https://helpcenter.onlyoffice.com/tipstricks/authorization-keys-saas.aspx" onclick="onhyperlinkclick(this)">для SaaS-версии</a>. </p>
-            <p>Для получения дополнительной информации о плагинах, пожалуйста, обратитесь к нашей <a target="_blank" href="https://api.onlyoffice.com/plugin/basic" onclick="onhyperlinkclick(this)">Документации по API</a>. Все существующие в настоящий момент примеры плагинов с открытым исходным кодом доступны на <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins" onclick="onhyperlinkclick(this)">GitHub</a>.</p>
+            <p class="onlineDocumentFeatures ONLYOFFICEFeatures">Плагины <b>Wordpress</b> и <b>EasyBib</b> можно использовать, если подключить соответствующие сервисы в настройках портала. Можно воспользоваться следующими инструкциями <a target="_blank" href="https://helpcenter.onlyoffice.com/server/windows/community/authorization-keys.aspx" onclick="onhyperlinkclick(this)">для серверной версии</a> или <a target="_blank" href="https://helpcenter.onlyoffice.com/tipstricks/authorization-keys-saas.aspx" onclick="onhyperlinkclick(this)">для SaaS-версии</a>. </p>
+            <p class="ONLYOFFICEFeatures">Для получения дополнительной информации о плагинах, пожалуйста, обратитесь к нашей <a target="_blank" href="https://api.onlyoffice.com/plugin/basic" onclick="onhyperlinkclick(this)">Документации по API</a>. Все существующие в настоящий момент примеры плагинов с открытым исходным кодом доступны на <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins" onclick="onhyperlinkclick(this)">GitHub</a>.</p>
+            <p class="R7OFFICEFeatures">Если вы хотите написать свой собственный плагин, пожалуйста, обратитесь к нашей <a target="_blank" href="https://helpcenter.r7-office.ru/desktop/documents/plugins/index.aspx" onclick="onhyperlinkclick(this)">инструкции</a>.</p>
 		</div>
 	</body>
 </html>
