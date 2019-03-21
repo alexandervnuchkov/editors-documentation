@@ -72,7 +72,13 @@ td.function
 width: 35%;
 }
 
-td.shortfunction
+th.function
+{
+width: 25%;
+}
+
+td.shortfunction,
+th.shortfunction
 {
 width: 20%;
 }
@@ -82,12 +88,23 @@ td.combination
 width: 15%;
 }
 
+th.combination
+{
+width: 20%;
+}
+
 td.description
 {
 width: 50%;
 }
 
-td.longdescription
+th.description
+{
+width: 35%;
+}
+
+td.longdescription,
+th.longdescription
 {
 width: 80%;
 }
@@ -160,12 +177,12 @@ text-decoration: none;
 kbd {
     display: inline-block;
     padding: 0.2em 0.3em;
-    border: solid 1px #ccc;
     border-radius: .2em;
     line-height: 1em;
-    background-color: #f4f4f4;
+    background-color: #f2f2f2;
     font-family: monospace;
     white-space: nowrap;
-    box-shadow: 0 0 0 2px #fff inset;
-    margin: 0 0 1px;
+    box-shadow: 0 1px 3px rgba(85,85,85,.35);
+    margin: 0.2em 0.1em;
+    color: #000;
 }
