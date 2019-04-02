@@ -400,7 +400,7 @@
   "DE.Controllers.Main.textClose": "Близо",
   "DE.Controllers.Main.textCloseTip": "Кликнете, за да затворите отгоре",
   "DE.Controllers.Main.textContactUs": "Свържете се с продажбите",
-  "DE.Controllers.Main.textCustomLoader": "<br> Моля, свържете се с нашия отдел Продажби, за да получите оферта.",
+  "DE.Controllers.Main.textCustomLoader": "Моля, имайте предвид, че според условията на лиценза нямате право да сменяте товарача. <br> Моля, свържете се с нашия отдел Продажби, за да получите оферта.",
   "DE.Controllers.Main.textLoadingDocument": "Зареждане на документ",
   "DE.Controllers.Main.textNoLicenseTitle": "Ограничение за връзка ONLYOFFICE",
   "DE.Controllers.Main.textPaidFeature": "Платена функция",
