@@ -3,6 +3,14 @@
     error_reporting(E_ALL);
     //ini_set("display_errors", 1);
     
+    function siteURL()
+    {
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        $domainName = $_SERVER['HTTP_HOST'].'/';
+        return $protocol.$domainName;
+    }
+    define( 'SITE_URL', siteURL() );
+
     $json = '';
     $totalPages = '0';
     
@@ -36,7 +44,7 @@
             }
 
             echo '<p>Editor: <b>' . $editorsPrint . '</b>, language: <b>' . $languagePrint . '</b></p>';
-            echo '<p>Try if it works correctly: <a target="_blank" href="http://192.168.3.50:8082/OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/search.html?query=document">http://192.168.3.50:8082/OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/search.html?query=document</a></p>';
+            echo '<p>Try if it works correctly: <a target="_blank" href="' . SITE_URL . 'OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/search.html?query=document">' . SITE_URL . 'OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/search.html?query=document</a></p>';
             echo '<p><a class="indexesjs_link" onclick="javascript: $(\'html, body\').animate({ \'scrollTop\': $(\'#indexesjs\').offset().top - 50}, 500)">Go to indexes.js file</a></p>';
             echo '<p>___________________________________________</p>';
 
