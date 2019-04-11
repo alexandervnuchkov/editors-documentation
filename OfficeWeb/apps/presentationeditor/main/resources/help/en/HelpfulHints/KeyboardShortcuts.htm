@@ -7,6 +7,8 @@
 		<link type="text/css" rel="stylesheet" href="../editor.css" />
         <script type="text/javascript" src="../callback.js"></script>
         <script type="text/javascript" src="../search/js/page-search.js"></script>
+        <script type="text/javascript" src="../search/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../search/js/keyboard-switch.js"></script>
 	</head>
 	<body>
 		<div class="mainpart">
@@ -14,15 +16,13 @@
             <input id="search" class="searchBar" placeholder="Search" type="text" onkeypress="doSearch(event)">
         </div>
 			<h1>Keyboard Shortcuts</h1>
-			<table>
+            <ul class="shortcut_variants">
+                <li class="shortcut_toggle pc_option left_option">Windows/Linux</li><!--
+                --><li class="shortcut_toggle mac_option right_option">Mac OS</li>
+            </ul>
+			<table class="keyboard_shortcuts_table">
 				<tr>
 					<th colspan="4" class="keyboard_section">Working with Presentation</th>
-				</tr>
-				<tr>
-					<th class="function">Action</th>
-					<th class="combination">PC shortcut</th>
-					<th class="combination">Mac shortcut</th>
-					<th class="description">Description</th>
 				</tr>
 				<tr>
 					<td>Open 'File' panel</td>
@@ -106,12 +106,6 @@
 					<th colspan="4" class="keyboard_section">Navigation</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>The first slide</td>
 					<td><kbd>Home</kbd></td>
 					<td><kbd>Home</kbd>,<br /><kbd>Fn</kbd>+<kbd>←</kbd></td>
@@ -149,12 +143,6 @@
 				</tr>
 				<tr id="manageslides">
 					<th colspan="4" class="keyboard_section">Performing Actions on Slides</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>New slide</td>
@@ -196,12 +184,6 @@
                     <th colspan="4" class="keyboard_section"><a id="workwithobjects"></a>Performing Actions on Objects</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Create a copy</td>
 					<td><kbd>Ctrl</kbd> + drag,<br /><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
 					<td><kbd>^ Ctrl</kbd> + drag,<br /><kbd>^ Ctrl</kbd>+<kbd>D</kbd>,<br /><kbd>&#8984; Cmd</kbd>+<kbd>D</kbd></td>
@@ -241,12 +223,6 @@
 					<th colspan="4" class="keyboard_section">Modifying Objects</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Constrain movement</td>
 					<td><kbd>⇧ Shift</kbd> + drag</td>
 					<td><kbd>⇧ Shift</kbd> + drag</td>
@@ -273,12 +249,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section"><a id="workwithtables"></a>Working with Tables</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Move to the next cell in a row</td>
                     <td><kbd>↹ Tab</kbd></td>
@@ -319,12 +289,6 @@
 					<th colspan="4" class="keyboard_section"><a id="preview"></a>Previewing Presentation</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Start preview from the beginning</td>
 					<td><kbd>Ctrl</kbd>+<kbd>F5</kbd></td>
 					<td><kbd>^ Ctrl</kbd>+<kbd>F5</kbd></td>
@@ -352,12 +316,6 @@
 					<th colspan="4" class="keyboard_section">Undo and Redo</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Undo</td>
 					<td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
 					<td><kbd>^ Ctrl</kbd>+<kbd>Z</kbd>,<br /><kbd>&#8984; Cmd</kbd>+<kbd>Z</kbd></td>
@@ -371,12 +329,6 @@
 				</tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Cut, Copy, and Paste</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Cut</td>
@@ -418,12 +370,6 @@
 					<th colspan="4" class="keyboard_section">Selecting with the Mouse</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Add to the selected fragment</td>
 					<td><kbd>⇧ Shift</kbd></td>
 					<td><kbd>⇧ Shift</kbd></td>
@@ -431,12 +377,6 @@
 				</tr>
 				<tr>
 					<th colspan="4" class="keyboard_section"><a id="textselection"></a>Selecting using the Keyboard</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Select all</td>
@@ -500,12 +440,6 @@
                 </tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Text Styling</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Bold</td>
@@ -618,12 +552,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section">Moving around in text</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Move one character to the left</td>
                     <td><kbd>←</kbd></td>

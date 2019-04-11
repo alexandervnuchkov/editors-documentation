@@ -7,6 +7,8 @@
 		<link type="text/css" rel="stylesheet" href="../editor.css" />
         <script type="text/javascript" src="../callback.js"></script>
         <script type="text/javascript" src="../search/js/page-search.js"></script>
+        <script type="text/javascript" src="../search/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../search/js/keyboard-switch.js"></script>
 	</head>
 	<body>
 		<div class="mainpart">
@@ -14,15 +16,13 @@
             <input id="search" class="searchBar" placeholder="Search" type="text" onkeypress="doSearch(event)">
         </div>
 			<h1>Keyboard Shortcuts</h1>
-			<table>
+            <ul class="shortcut_variants">
+                <li class="shortcut_toggle pc_option left_option">Windows/Linux</li><!--
+                --><li class="shortcut_toggle mac_option right_option">Mac OS</li>
+            </ul>
+			<table class="keyboard_shortcuts_table">
 				<tr>
 					<th colspan="4" class="keyboard_section">Working with Document</th>
-				</tr>
-				<tr>
-					<th class="function">Action</th>
-					<th class="combination">PC shortcut</th>
-					<th class="combination">Mac shortcut</th>
-					<th class="description">Description</th>
 				</tr>
 				<tr>
 					<td>Open 'File' panel</td>
@@ -116,12 +116,6 @@
                 </tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Navigation</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Jump to the beginning of the line</td>
@@ -245,12 +239,6 @@
 					<th colspan="4" class="keyboard_section">Writing</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>End paragraph</td>
 					<td><kbd>↵ Enter</kbd></td>
 					<td><kbd>↵ Return</kbd></td>
@@ -269,6 +257,18 @@
 					<td>Delete one character to the left (<kbd>← Backspace</kbd>) or to the right (<kbd>Delete</kbd>) of the cursor.</td>
 				</tr>
 				<tr>
+					<td>Delete word to the left of cursor</td>
+					<td><kbd>Ctrl</kbd>+<kbd>Backspace</kbd></td>
+					<td><kbd>^ Ctrl</kbd>+<kbd>Backspace</kbd>,<br /><kbd>&#8984; Cmd</kbd>+<kbd>Backspace</kbd></td>
+					<td>Delete one word to the left of the cursor.</td>
+				</tr>
+				<tr>
+					<td>Delete word to the right of cursor</td>
+					<td><kbd>Ctrl</kbd>+<kbd>Delete</kbd></td>
+					<td><kbd>^ Ctrl</kbd>+<kbd>Delete</kbd>,<br /><kbd>&#8984; Cmd</kbd>+<kbd>Delete</kbd></td>
+					<td>Delete one word to the right of the cursor.</td>
+				</tr>
+				<tr>
 					<td>Create nonbreaking space</td>
 					<td><kbd>Ctrl</kbd>+<kbd>⇧ Shift</kbd>+<kbd>␣ Spacebar</kbd></td>
 					<td><kbd>^ Ctrl</kbd>+<kbd>⇧ Shift</kbd>+<kbd>␣ Spacebar</kbd></td>
@@ -284,12 +284,6 @@
 					<th colspan="4" class="keyboard_section">Undo and Redo</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Undo</td>
 					<td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
 					<td><kbd>^ Ctrl</kbd>+<kbd>Z</kbd>,<br /><kbd>&#8984; Cmd</kbd>+<kbd>Z</kbd></td>
@@ -303,12 +297,6 @@
 				</tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Cut, Copy, and Paste</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Cut</td>
@@ -348,12 +336,6 @@
 				</tr>
 				<tr>
 					<th colspan="4" class="keyboard_section"><a id="textselection"></a>Text Selection</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Select all</td>
@@ -415,14 +397,20 @@
                     <td><kbd>⇧ Shift</kbd>+<kbd>↓</kbd></td>
                     <td>Select one line down (with the cursor at the beginning of a line).</td>
                 </tr>
+                <tr>
+                    <td>Select the page up</td>
+                    <td><kbd>⇧ Shift</kbd>+<kbd>Page Up</kbd></td>
+                    <td><kbd>⇧ Shift</kbd>+<kbd>Page Up</kbd></td>
+                    <td>Select the page part from the cursor position to the upper part of the screen.</td>
+                </tr>
+                <tr>
+                    <td>Select the page down</td>
+                    <td><kbd>⇧ Shift</kbd>+<kbd>Page Down</kbd></td>
+                    <td><kbd>⇧ Shift</kbd>+<kbd>Page Down</kbd></td>
+                    <td>Select the page part from the cursor position to the lower part of the screen.</td>
+                </tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Text Styling</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Bold</td>
@@ -588,12 +576,6 @@
 					<th colspan="4" class="keyboard_section"><a id="workwithobjects"></a>Modifying Objects</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Constrain movement</td>
 					<td><kbd>⇧ Shift</kbd> + drag</td>
 					<td><kbd>⇧ Shift</kbd> + drag</td>
@@ -626,12 +608,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section"><a id="workwithtables"></a>Working with Tables</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Move to the next cell in a row</td>
                     <td><kbd>↹ Tab</kbd></td>
@@ -672,12 +648,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section">Inserting special characters</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <!--<tr>
                     <td>Insert the Euro sign</td>
                     <td><kbd>Alt</kbd>+<kbd>Ctrl</kbd>+<kbd>E</kbd></td>

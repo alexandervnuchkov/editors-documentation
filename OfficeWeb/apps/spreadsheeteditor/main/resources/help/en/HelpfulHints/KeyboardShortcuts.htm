@@ -7,6 +7,8 @@
 		<link type="text/css" rel="stylesheet" href="../editor.css" />
         <script type="text/javascript" src="../callback.js"></script>
         <script type="text/javascript" src="../search/js/page-search.js"></script>
+        <script type="text/javascript" src="../search/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../search/js/keyboard-switch.js"></script>
 	</head>
 	<body>
 		<div class="mainpart">
@@ -14,15 +16,13 @@
                 <input id="search" class="searchBar" placeholder="Search" type="text" onkeypress="doSearch(event)">
             </div>
 			<h1>Keyboard Shortcuts</h1>
-			<table>
+            <ul class="shortcut_variants">
+                <li class="shortcut_toggle pc_option left_option">Windows/Linux</li><!--
+                --><li class="shortcut_toggle mac_option right_option">Mac OS</li>
+            </ul>
+			<table class="keyboard_shortcuts_table">
 				<tr>
 					<th colspan="4" class="keyboard_section">Working with Spreadsheet</th>
-				</tr>
-				<tr>
-					<th class="function">Action</th>
-					<th class="combination">PC shortcut</th>
-					<th class="combination">Mac shortcut</th>
-					<th class="description">Description</th>
 				</tr>
 				<tr>
 					<td>Open 'File' panel</td>
@@ -110,12 +110,6 @@
                 </tr>
 				<tr>
 					<th colspan="4" class="keyboard_section">Navigation</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
                 <tr>
                     <td>Move one cell up, down, left, or right</td>
@@ -217,12 +211,6 @@
 					<th colspan="4" class="keyboard_section">Data Selection</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Select all</td>
 					<td><kbd>Ctrl</kbd>+<kbd>A</kbd>,<br /><kbd>Ctrl</kbd>+<kbd>⇧ Shift</kbd>+<kbd>␣ Spacebar</kbd></td>
 					<td><kbd>&#8984; Cmd</kbd>+<kbd>A</kbd></td>
@@ -316,12 +304,6 @@
                     <th colspan="4" class="keyboard_section">Undo and Redo</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>Undo</td>
 					<td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td>
 					<td><kbd>&#8984; Cmd</kbd>+<kbd>Z</kbd></td>
@@ -335,12 +317,6 @@
 				</tr>
 				<tr>
                     <th colspan="4" class="keyboard_section">Cut, Copy, and Paste</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Cut</td>
@@ -362,12 +338,6 @@
 				</tr>
 				<tr>
                     <th colspan="4" class="keyboard_section">Data Formatting</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Bold</td>
@@ -408,12 +378,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section">Data Filtering</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Enable/Remove Filter</td>
                     <td><kbd>Ctrl</kbd>+<kbd>⇧ Shift</kbd>+<kbd>L</kbd></td>
@@ -428,12 +392,6 @@
                 </tr>
 				<tr>
                     <th colspan="4" class="keyboard_section">Data Entry</th>
-				</tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
 				</tr>
 				<tr>
 					<td>Complete cell entry and move down</td>
@@ -493,12 +451,6 @@
                     <th colspan="4" class="keyboard_section">Functions</th>
 				</tr>
 				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
-				<tr>
 					<td>SUM function</td>
 					<td><kbd>Alt</kbd>+<kbd>=</kbd></td>
 					<td><kbd>⌥ Option</kbd>+<kbd>=</kbd></td>
@@ -519,12 +471,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section"><a id="dataformats"></a>Data Formats</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Open the 'Number Format' dialog box</td>
                     <td><kbd>Ctrl</kbd>+<kbd>1</kbd></td>
@@ -576,12 +522,6 @@
                 <tr>
                     <th colspan="4" class="keyboard_section"><a id="workwithobjects"></a>Modifying Objects</th>
                 </tr>
-				<tr>
-					<th>Action</th>
-					<th>PC shortcut</th>
-					<th>Mac shortcut</th>
-					<th>Description</th>
-				</tr>
                 <tr>
                     <td>Constrain movement</td>
                     <td><kbd>⇧ Shift</kbd> + drag</td>
