@@ -1,5 +1,9 @@
 ﻿<form action="" method="get">
     <div class="formDiv">
+        <select name="projectVersion">
+            <option <?php if($_GET['projectVersion'] == 'onlyoffice') echo 'selected'; ?> value="onlyoffice">ONLYOFFICE</option>
+            <option <?php if($_GET['projectVersion'] == 'r7office') echo 'selected'; ?> value="r7office">Р7 Офис</option>
+        </select>
         <select name="editorVersion">
             <option <?php if($_GET['editorVersion'] == 'documenteditor') echo 'selected'; ?> value="documenteditor">Document Editor</option>
             <option <?php if($_GET['editorVersion'] == 'presentationeditor') echo 'selected'; ?> value="presentationeditor">Presentation Editor</option>

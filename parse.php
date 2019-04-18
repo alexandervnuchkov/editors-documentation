@@ -15,11 +15,24 @@
     $totalPages = '0';
     
     include('shared/backToLink.php');
-
+    
     if(isset($_GET['submitEditor'])) {
+        $varProject = $_GET['projectVersion'];
         $varEditors = $_GET['editorVersion'];
         $languageLocale = $_GET['languageList'];
 
+        if($varProject == 'onlyoffice') {
+            $replacer = 'Подключиться к облаку';
+            $pathToIndexesJS = realpath(dirname(__DIR__) . '\\documenteditors\\OfficeWeb\\');
+            $networkPathToIndexesJS = '\\\\vnuchkov10\\sites\\documenteditors\\OfficeWeb\\apps\\';
+        } else if($varProject == 'r7office') {
+            $replacer = 'Совместная работа';
+            $pathToIndexesJS = realpath(dirname(__DIR__) . '\\helpcenter.onlyoffice.com\\helpcenter.r7-office.ru\\Web\\OfficeWeb\\');
+            $networkPathToIndexesJS = '\\\\vnuchkov10\sites\helpcenter.onlyoffice.com\\helpcenter.r7-office.ru\\Web\\OfficeWeb\\apps\\';
+        } else {
+            $replacer = 'Подключиться к облаку';
+        }
+        
         $pages = array_map(null, glob('OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/*/*.htm'));
         
         if(count($pages) != 0) {
@@ -61,6 +74,7 @@
                 
                 $html = file_get_html($url);
                 
+                
                 $titleTag = $html->find('title');
                 foreach($titleTag as $titleValue) {
                     $title = $titleValue->plaintext;
@@ -78,6 +92,9 @@
                     $bodyTrimmed = preg_replace('/\s\s+/', ' ', $bodyTrimmed);
                     $bodyTrimmed = str_replace("\\","\\\\",$bodyTrimmed);
                     $bodyTrimmed = str_replace('"','\"',$bodyTrimmed);
+                    if($replacer != '') {
+                        $bodyTrimmed = str_replace("{{COEDITING_DESKTOP}}",$replacer,$bodyTrimmed);
+                    }
                     
                     if (substr($bodyTrimmed, 0, strlen($title)) == $title) {
                         $bodyTrimmed = substr($bodyTrimmed, strlen($title));
@@ -95,10 +112,10 @@
             $file_start = 'var indexes = ' . PHP_EOL . '[';
             $file_end = PHP_EOL . ']';
             $json = rtrim($json,",");
-            file_put_contents('OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/indexes.js', $file_start . $json . $file_end);
+            file_put_contents($pathToIndexesJS . '/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/indexes.js', $file_start . $json . $file_end);
             echo '<p>___________________________________________</p><p>Total pages: <b>' . $totalPages . '</b></p>';
-            echo '<p></p><p>===========================================</p><p><a id="indexesjs"></a><b>indexes.js</b> (file path: <u>\\\\vnuchkov10\sites\documenteditors\OfficeWeb\apps\\' . $varEditors. '\main\resources\help\\' . $languageLocale. '\search\indexes.js</u>):</p>';
-            echo '<pre>' . file_get_contents('OfficeWeb/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/indexes.js') . '</pre>';
+            echo '<p></p><p>===========================================</p><p><a id="indexesjs"></a><b>indexes.js</b> (file path: <u>' . $networkPathToIndexesJS . $varEditors. '\main\resources\help\\' . $languageLocale. '\search\indexes.js</u>):</p>';
+            echo '<pre>' . file_get_contents($pathToIndexesJS . '/apps/' . $varEditors. '/main/resources/help/' . $languageLocale. '/search/indexes.js') . '</pre>';
         }
     }
 ?>
