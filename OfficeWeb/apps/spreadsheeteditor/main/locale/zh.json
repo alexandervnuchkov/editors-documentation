@@ -273,8 +273,6 @@
   "SSE.Controllers.DocumentHolder.txtDeleteEq": "删除方程",
   "SSE.Controllers.DocumentHolder.txtDeleteGroupChar": "删除字符",
   "SSE.Controllers.DocumentHolder.txtDeleteRadical": "彻底删除",
-  "SSE.Controllers.DocumentHolder.txtDistribHor": "水平分布",
-  "SSE.Controllers.DocumentHolder.txtDistribVert": "垂直分布",
   "SSE.Controllers.DocumentHolder.txtEnds": "结束于",
   "SSE.Controllers.DocumentHolder.txtEquals": "等于",
   "SSE.Controllers.DocumentHolder.txtEqualsToCellColor": "等于单元格颜色",
