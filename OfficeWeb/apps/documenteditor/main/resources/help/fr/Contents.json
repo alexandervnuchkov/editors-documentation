@@ -2,7 +2,7 @@
   {
     "src": "ProgramInterface/ProgramInterface.htm",
     "name": "Présentation de l'interface de Document Editor",
-    "headername": "Interface du Programme"
+    "headername": "Interface du programme"
   },
   {
     "src": "ProgramInterface/FileTab.htm",
@@ -71,6 +71,10 @@
     "name": "Insérer les notes de bas de page"
   },
   {
+    "src": "UsageInstructions/InsertBookmarks.htm",
+    "name": "Ajouter des marque-pages"
+  },
+  {
     "src": "UsageInstructions/AlignText.htm",
     "name": "Alignement du texte d'un paragraphe",
     "headername": "Mise en forme de paragraphe"
@@ -131,7 +135,11 @@
   {
     "src": "UsageInstructions/InsertTables.htm",
     "name": "Insérer des tableaux",
-    "headername": "Opérations sur des objets"
+    "headername": "Opérations sue les objets"
+  },
+  {
+    "src": "UsageInstructions/AddFormulasInTables.htm",
+    "name": "Utiliser des formules dans les tableaux"
   },
   {
     "src": "UsageInstructions/InsertImages.htm",
@@ -167,7 +175,7 @@
   },
   {
     "src": "UsageInstructions/UseMailMerge.htm",
-    "name": "Utiliser le publipostage,",
+    "name": "Utiliser le publipostage",
     "headername": "Publipostage"
   },
   {
