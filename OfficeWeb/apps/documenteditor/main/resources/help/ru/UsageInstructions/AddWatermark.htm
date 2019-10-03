@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Добавление подложки</title>
+		<meta charset="utf-8" />
+        <meta name="description" content="Watermark allow to indicate your document status (for example, confidential, draft etc.)" />
+		<link type="text/css" rel="stylesheet" href="../editor.css" />
+        <script type="text/javascript" src="../callback.js"></script>
+        <script type="text/javascript" src="../search/js/page-search.js"></script>
+	</head>
+	<body>
+		<div class="mainpart">
+        <div class="search-field">
+            <input id="search" class="searchBar" placeholder="Search" type="text" onkeypress="doSearch(event)">
+        </div>
+			<h1>Добавление подложки</h1>
+            <p>Watermark allow to indicate your document status (for example, confidential, draft etc.).</p>
+			<p>Для добавления подложки в документ:</p>
+			<ol>
+                <li>перейдите на вкладку <b>Макет</b> на верхней панели инструментов,</li>
+                <li>нажмите на значок <img alt="Значок Подложка" src="../images/watermark.png" /> <b>Подложка</b> на верхней панели инструментов и выберите пункт меню <b>Настраиваемая подложка</b>,</li>
+                <li>откроется окно <b>Параметры подложки</b> window will appear where you can specify the watermark parameters,
+                    <p><img alt="Окно Параметры подложки" src="../images/watermark_settings.png" /></p>
+                </li>
+                <li>Выберите тип подложки, которую требуется вставить:
+                    <ul>
+                        <li>Используйте опцию <b>Текстовая подложка</b> и настройте доступные параметры:
+                            <ul>
+                                <li><b>Язык</b> - выберите из списка один из доступных языков,</li>
+                                <li><b>Текст</b> - выберите один из доступных примеров текста на выбранном языке. Для русского языка доступны следующие тексты подложки: <em>ДЛЯ СЛУЖЕБНОГО ПОЛЬЗОВАНИЯ</em>, <em>ДСП</em>, <em>КОПИРОВАТЬ НЕ РАЗРЕШАЕТСЯ</em>, <em>КОПИЯ</em>, <em>ЛИЧНОЕ</em>, <em>ОБРАЗЕЦ</em>, <em>ОРИГИНАЛ</em>, <em>СЕКРЕТНО</em>, <em>СОВ. СЕКРЕТНО</em>, <em>СОВЕРШЕННО СЕКРЕТНО</em>, <em>СРОЧНО</em>, <em>ЧЕРНОВИК</em>.</li>
+                                <li><b>Шрифт</b> - select the font name and size from the corresponding drop-down lists. Use the icons to set the font color or apply one of the decoration styles: <em>Bold</em>, <em>Italic</em>, <em>Underline</em>, <em>Strikeout</em>,</li>
+                                <li><b>Полупрозрачный</b> - check this box if you want to apply transparency,</li>
+                                <li><b>Расположение</b> - select the <b>По диагонали</b> or <b>По горизонтали</b> option.</li>
+                            </ul>
+                        </li>
+                        <li>Используйте опцию <b>Графическая подложка</b> и настройте доступные параметры:
+                            <ul>
+                                <li>Choose the image file source using one of the buttons: <b>Из файла</b> или <b>По URL</b> - the image will be displayed in the preview window on the right,</li>
+                                <li><b>Масштаб</b> - select the necessary scale value from the available ones: <em>Авто</em>, <em>500%</em>, <em>200%</em>, <em>150%</em>, <em>100%</em>, <em>50%</em>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Нажмите кнопку <b>OK</b>.</li>
+			</ol>
+            <p>To edit the added watermark, open the <b>Watermark Settings</b> window as described above, change the necessary parameters and click <b>OK</b>.</p>
+            <p>To delete the added watermark click the <img alt="Watermark icon" src="../images/watermark.png" /> <b>Watermark</b> icon at the <b>Layout</b> tab of the top toolbar and choose the <b>Remove Watermark</b> option from the menu. It's also possible to use the <b>None</b> option in the <b>Watermark Settings</b> window.</p>
+            
+		</div>
+	</body>
+</html>
